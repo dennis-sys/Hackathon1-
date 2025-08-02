@@ -1,5 +1,5 @@
 # Hackathon1-
-Personal_Portfolio Link: https://denis-kobia-portfolio.netlify.app/
+Personal_Portfolio Link: https://denis-githinji-portfolio.netlify.app/
 # Portfolio Website README
 
 ## Overview
