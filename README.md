@@ -1,5 +1,5 @@
 # Hackathon1-
-Personal_Portfolio
+Personal_Portfolio Link: https://denis-kobia-portfolio.netlify.app/
 # Portfolio Website README
 
 ## Overview
@@ -32,7 +32,6 @@ project2-bitcoin-calculator.zip - Second project file (to be added)
 
 ### 1. Form Configuration
 The contact form uses Formspree for backend processing:
-- Replace `YOUR_FORM_ID` in the form action with your actual Formspree form ID
 - Ensure the form has `method="POST"` attribute (already included)
 - Visit [Formspree.io](https://formspree.io) to create a free account and get your form endpoint
 
@@ -59,11 +58,7 @@ The contact form uses Formspree for backend processing:
 4. Verify all links work correctly
 
 ## Hosting Options
-This website can be hosted on:
-- GitHub Pages (free)
-- Netlify (free)
-- Vercel (free)
-- Any standard web hosting service
+This website can be hosted on: Netlify
 
 ## Customization Tips
 - Modify colors in the CSS to change the theme
@@ -72,4 +67,4 @@ This website can be hosted on:
 - Include social media links in the footer
 
 ## License
-This portfolio template is free to use, modify, and distribute. Feel free to customize it to fit your personal brand and professional needs.
+This portfolio template is free to use and modify. Feel free to customize it to fit your personal brand and professional needs.
