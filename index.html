@@ -1,0 +1,428 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <!-- 
+  Document Type: HTML5
+  Language: English 
+  This is the main portfolio page for Denis Githinji Kobia.
+  -->
+
+  <meta charset="UTF-8" />
+  <!-- Ensures proper character encoding (e.g., special symbols, accents) -->
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <!-- Makes the website responsive on mobile devices -->
+
+  <title>Denis Githinji Kobia - Portfolio</title>
+  <!-- Title shown in the browser tab -->
+
+  <style>
+    /* 
+    ===============
+    GLOBAL STYLES
+    ===============
+    These styles apply across the entire website.
+    */
+
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      /* Ensures padding and borders are included in element width/height */
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      /* Clean, modern font stack */
+    }
+
+    body {
+      background-color: #e6f7ff;
+      /* Light sky-blue background for a professional, airy feel */
+      color: #1a3c5a;
+      /* Dark blue-gray text for readability */
+      line-height: 1.7;
+      /* Improves paragraph readability with more space between lines */
+    }
+
+    .container {
+      width: 90%;
+      max-width: 1200px;
+      /* Limits content width on large screens for better readability */
+      margin: auto;
+      /* Centers the container horizontally */
+      padding: 20px;
+      /* Adds inner spacing */
+    }
+
+    /*
+    ===============
+    HEADER STYLES
+    ===============
+    The top banner with name and tagline.
+    */
+
+    header {
+      background: linear-gradient(rgba(26, 60, 90, 0.8), rgba(26, 60, 90, 0.8)), 
+                  url("https://drive.google.com/file/d/1hgVV0ugZDPQOoSp9OQShgM13u4JJbIvb/view?usp=drive_link") center/cover no-repeat;
+      /* 
+      - Semi-transparent dark overlay (linear-gradient) improves text readability
+  
+      - 'center/cover' ensures the image fills the header without stretching
+      */
+      color: white;
+      text-align: center;
+      padding: 100px 20px;
+      /* Generous padding for visual impact */
+      border-bottom: 5px solid #00bfff;
+      /* Sky blue underline for visual separation */
+    }
+
+    header h1 {
+      font-size: 3rem;
+      margin-bottom: 10px;
+      /* Large, bold title */
+    }
+
+    header p {
+      font-size: 1.3rem;
+      max-width: 800px;
+      margin: auto;
+      /* Subtitle centered and constrained for readability */
+    }
+
+    /*
+    ===============
+    SECTION STYLES
+    ===============
+    Applies to all content sections (About, Education, etc.)
+    */
+
+    section {
+      padding: 60px 0;
+      /* Vertical spacing above and below each section */
+    }
+
+    section h2 {
+      font-size: 2.2rem;
+      margin-bottom: 20px;
+      color: #0088cc;
+      /* Sky blue heading color */
+      border-bottom: 3px solid #00bfff;
+      /* Underline in vibrant sky blue */
+      display: inline-block;
+      padding-bottom: 8px;
+      /* Makes the underline hug the text */
+    }
+
+    .section-content {
+      background: white;
+      padding: 30px;
+      border-radius: 12px;
+      /* Rounded corners for a modern card-like look */
+      box-shadow: 0 5px 15px rgba(0, 144, 255, 0.1);
+      /* Subtle blue-tinted shadow for depth */
+    }
+
+    ul {
+      margin-left: 20px;
+      /* Indents bullet points */
+      margin-bottom: 15px;
+      /* Adds space after lists */
+    }
+
+    /*
+    ===============
+    LINK STYLES
+    ===============
+    Custom styling for all hyperlinks
+    */
+
+    a {
+      color: #0088cc;
+      text-decoration: none;
+      font-weight: bold;
+    }
+
+    a:hover {
+      text-decoration: underline;
+      color: #005580;
+      /* Darker blue on hover for interactivity feedback */
+    }
+
+    /*
+    ===============
+    DOWNLOAD BUTTONS
+    ===============
+    Styled as buttons for better visibility
+    */
+
+    .download-links {
+      margin: 20px 0;
+      /* Spacing above and below download section */
+    }
+
+    .download-links a {
+      display: inline-block;
+      margin-right: 20px;
+      background: #00bfff;
+      color: white;
+      padding: 10px 20px;
+      border-radius: 6px;
+      transition: background 0.3s;
+      /* Smooth color transition on hover */
+    }
+
+    .download-links a:hover {
+      background: #0088cc;
+      /* Darker on hover for visual feedback */
+    }
+
+    /*
+    ===============
+    INTERESTS STYLING
+    ===============
+    Emphasizes interest categories
+    */
+
+    .interests li {
+      margin-bottom: 10px;
+      /* Space between each interest item */
+    }
+
+    .interests strong {
+      color: #005580;
+      /* Slightly darker for category headings */
+    }
+
+    /*
+    ===============
+    CONTACT FORM STYLES
+    ===============
+    Makes the form clean and user-friendly
+    */
+
+    form {
+      display: flex;
+      flex-direction: column;
+      gap: 15px;
+      /* Space between form elements */
+    }
+
+    label {
+      font-weight: 600;
+      color: #003355;
+      /* Dark label text for clarity */
+    }
+
+    input, textarea, select {
+      padding: 10px;
+      border: 1px solid #b3e5fc;
+      /* Light blue border */
+      border-radius: 6px;
+      font-size: 1rem;
+    }
+
+    input:focus, textarea:focus, select:focus {
+      outline: none;
+      border-color: #00bfff;
+      /* Sky blue border on focus */
+      box-shadow: 0 0 5px rgba(0, 191, 255, 0.3);
+      /* Soft glow effect when user clicks into field */
+    }
+
+    button {
+      background: #00bfff;
+      color: white;
+      border: none;
+      padding: 12px;
+      font-size: 1rem;
+      border-radius: 6px;
+      cursor: pointer;
+      transition: background 0.3s;
+    }
+
+    button:hover {
+      background: #0088cc;
+      /* Button darkens on hover */
+    }
+
+    /*
+    ===============
+    FOOTER STYLES
+    ===============
+    Simple, clean footer
+    */
+
+    footer {
+      text-align: center;
+      padding: 30px 0;
+      background: #003355;
+      /* Dark blue background */
+      color: white;
+      margin-top: 60px;
+      /* Space above footer */
+    }
+  </style>
+</head>
+<body>
+
+  <!-- 
+  ===================
+  HEADER SECTION
+  ===================
+  Hero banner with name and tagline.
+  
+  -->
+  <header>
+    <div class="container">
+      <h1>Denis Githinji Kobia</h1>
+      <p>Web Developer & Data Innovator | Empowering Youth Through Technology</p>
+    </div>
+  </header>
+
+  <!-- 
+  Main content container with responsive width.
+  All sections are centered and constrained.
+  -->
+  <div class="container">
+
+    <!-- 
+    ===================
+    ABOUT ME SECTION
+    ===================
+    Personal introduction and mission statement.
+    -->
+    <section id="about">
+      <h2>📝 About Me</h2>
+      <div class="section-content">
+        <p>
+          Hi! My name is Denis Githinji Kobia, a passionate and forward-thinking web developer and Kenyan youth committed to leveraging my education and technical skills to drive impactful digital transformation in national youth initiatives. 
+        </p>
+        <p>
+          I hold a Bachelor's degree in Actuarial Science, complemented by a Certificate of Excellence in Data Science and Analytics and a Certificate in AI Solutions Engineering. With a strong foundation in data-driven decision-making and emerging technologies, I aim to develop innovative digital systems that enhance the coordination, visibility, and effectiveness of youth programs across Kenya.
+        </p>
+      </div>
+    </section>
+
+    <!-- 
+    ===================
+    EDUCATION SECTION
+    ===================
+    Lists academic qualifications and includes CV download.
+    -->
+    <section id="education">
+      <h2>🎓 Educational Background</h2>
+      <div class="section-content">
+        <ul>
+          <li><strong>Bachelor Degree in Actuarial Science</strong></li>
+          <li><strong>Certificate of Excellence in Data Science and Analytics</strong></li>
+          <li><strong>Certificate in AI Solutions Engineering</strong></li>
+        </ul>
+        <!-- Downloadable CV link -->
+        <div class="download-links">
+          <a href="https://drive.google.com/file/d/19dTq2T9wFxBLlGPZdyC-r5ZnaYOxRX1q/view?usp=drive_link" download>📄 Download My CV</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- 
+    ===================
+    INTERESTS SECTION
+    ===================
+    Highlights technical skills and passions.
+    -->
+    <section id="interests">
+      <h2>💡 Interests</h2>
+      <div class="section-content">
+        <ul class="interests">
+          <li><strong>Artificial Intelligence:</strong> Developing cutting-edge AI solutions using latest tools to solve real-life problems.</li>
+          <li><strong>Data Analytics:</strong> Mining, interpreting, and visualizing complex datasets to support strategic initiatives. Proficient in SQL, Python (Pandas, NumPy), and BI tools like Power BI to deliver actionable intelligence that boosts revenue and improves operational efficiency.</li>
+          <li><strong>Web Development:</strong> A highly skilled Full-Stack Developer with hands-on experience in designing, developing, and deploying dynamic web applications. Expert in the MERN (MongoDB, Express.js, React, Node.js) stack with a strong commitment to writing clean, maintainable code and creating exceptional user experiences.</li>
+          <li><strong>Machine Learning:</strong> Designing, building, and deploying predictive models to solve critical business problems. Proficient in Python, Scikit-learn, TensorFlow, and PyTorch, with a deep understanding of statistical modeling, feature engineering, and the complete MLOps lifecycle in cloud environments like AWS and GCP.</li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- 
+    ===================
+    PROJECTS SECTION
+    ===================
+    Describes current and upcoming projects with download links.
+    -->
+    <section id="projects">
+      <h2>🛠️ Projects</h2>
+      <div class="section-content">
+        <p><strong>Project 1: Green Path Nature Reserve</strong><br>
+          A full-stack web application for managing nature reserve bookings, wildlife tracking, and eco-tourism outreach. Built using React, Node.js, and MongoDB.</p>
+        
+        <!-- Download link for Project 1 -->
+        <div class="download-links">
+          <a href="https://github.com/PLP-WebTechnologies/july-2025-introduction-to-html-5-dennis-sys" download>⬇️ Download Project 1</a>
+        </div>
+
+        <p><strong>Project 2: Bitcoin Profitability Calculator (Upcoming)</strong><br>
+          A real-time cryptocurrency ROI calculator with historical data analysis and predictive modeling using machine learning.</p>
+
+        <!-- Disabled link for upcoming project -->
+        <div class="download-links">
+          <a href="project2-bitcoin-calculator.zip" download disabled>⚠️ Project 2 (Coming Soon)</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- 
+    ===================
+    CONTACT SECTION
+    ===================
+    Real contact form that submits data.
+    Uses Formspree.io for backend handling (no server needed).
+    -->
+    <section id="contact">
+      <h2>📬 Contact Me</h2>
+      <div class="section-content">
+        <p>Feel free to reach out!</p>
+        <!-- 
+        Form submits to Formspree. Replace 'YOUR_FORM_ID' with actual endpoint.
+        Formspree gives you a free email-inbox for form submissions.
+        -->
+        <form action="https://formspree.io/f/YOUR_FORM_ID" method="POST">
+          <label for="name">Name</label>
+          <input type="text" id="name" name="name" placeholder="Your Full Name" required />
+
+          <label for="email">Email</label>
+          <input type="email" id="email" name="email" placeholder="your.email@example.com" required />
+
+          <label for="country">Country</label>
+          <select id="country" name="country" required>
+            <option value="">-- Select Country --</option>
+            <option value="Kenya">Kenya</option>
+            <option value="USA">Uganda</option>
+            <option value="UK">Nigeria</option>
+            <option value="Canada">South Africa</option>
+            <option value="Germany">Ghana</option>
+            <option value="Australia">Tanzania</option>
+            <option value="Other">Other</option>
+          </select>
+
+          <label for="request">Your Request</label>
+          <textarea id="request" name="request" rows="5" placeholder="How can I help you?" required></textarea>
+
+          <button type="submit">Send Message</button>
+        </form>
+      </div>
+    </section>
+
+  </div>
+
+  <!-- 
+  ===================
+  FOOTER
+  ===================
+  Copyright notice at the bottom.
+  -->
+  <footer>
+    <div class="container">
+      <p>&copy; 2025 Denis Githinji Kobia. All Rights Reserved.</p>
+    </div>
+  </footer>
+
+</body>
+</html>
